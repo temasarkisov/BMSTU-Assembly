@@ -27,9 +27,7 @@ rev_copy:
     dec RSI
     dec RDI
     STD  ; DF = 1
-    copyCycle:
-        movsb
-    loop copyCycle
+    repnz movsb
     
 simple_copy:
     repnz movsb  ; Побайтовое копирование
